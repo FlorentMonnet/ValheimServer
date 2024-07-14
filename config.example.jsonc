@@ -1,0 +1,61 @@
+{
+    "k_drive": {
+        // Clef API pour se connecter à Kdrive
+        // Champ obligatoire 
+        // Pas dez valeur par défaut
+        "api_key": "<KDRIVE_API_KEY>",
+
+        // Id du drive sur Kdrive
+        // Champ obligatoire 
+        // Pas dez valeur par défaut
+        "id": 1234567 
+    },
+    "backup": {
+        // Chemin utilisé pour les backups 
+        // Champ facultatif
+        // Par  défaut: %userprofile% => (C:\\Users\\<USERNAME>)
+        "default_folder": "C:\\Users\\<USERNAME>",
+
+        // Nom du dossier utilisé pour sauvegarder les backups du dossier worlds_local
+        // Champ facultatif 
+        // Par défaut: WorldsLocal
+        "export_folder_name": "WorldsLocal",
+
+        // Nom du dossier utilisé pour sauvegarder les backups du dossier Valheim
+        // Champ facultatif
+        // Par défaut: Valheim
+        "import_folder_name": "Valheim",
+
+        // Temps de conservation des backups avant suppression
+        // Champ facultatif
+        // Par défaut: 7 jours
+        "purge_days":7,
+
+        // Format de date utilisé, voir la doc de python: https://docs.python.org/fr/3.6/library/datetime.html#strftime-and-strptime-behavior 
+        // Champ facultatif
+        // Par défaut: %m%d%Y_%H%M%S => 14072024_073015 pour un backup généré le 14/07/2024 à 07:30:15
+        "date_format":"%m%d%Y_%H%M%S",
+
+        // Prefix utilisé pour les noms
+        // Champ facultatif
+        // Par défaut: backup_
+        "prefix":"backup_",
+
+        // Archivage de fichier utilisé
+        // Champ facultatif
+        // Par défaut: zip
+        // Valeurs possibles: zip | tar | gztar
+        "archive_type":"zip"
+    },
+    "valheim": {
+        // Chemin vers le dossier de Valheim
+        // Champ facultatif 
+        // Par défaut: C:\\Users\\<USERNAME>\\AppData\\LocalLow\\IronGate\\Valheim
+        "default_folder":"C:\\Users\\<USERNAME>\\AppData\\LocalLow\\IronGate\\Valheim",
+
+        // Nom du dossier utilisé pour récupérer les mondes
+        // Champ facultatif
+        // Par défaut: worlds_local
+        "worlds_local_folder_name": "agriculture" 
+    }
+}
